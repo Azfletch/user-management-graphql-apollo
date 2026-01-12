@@ -7,6 +7,7 @@ import type { CourseResult } from '../../../types/user'
 import { DELETE_COURSE_RESULT } from '../../../queries/courseResults'
 
 import './index.scss'
+import UpdateCourseResultForm from '../../Forms/UpdateCourseResult'
 
 const ResultModal = ({ result, setShowUserModal, setShowResultModal }: Props) => {
   const { name, score, id } = result
@@ -56,7 +57,11 @@ const ResultModal = ({ result, setShowUserModal, setShowResultModal }: Props) =>
           </div>
         ) : (
           <div className='result-modal-content-body'>
-            Update Result Form
+              <UpdateCourseResultForm
+                result={result}
+                setShowUserModal={setShowUserModal}
+                setShowResultModal={setShowResultModal}
+              />
             <button onClick={() => setIsInUpdateResultMode(false)}>Back</button>
           </div>
         )}

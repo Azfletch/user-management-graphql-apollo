@@ -21,6 +21,6 @@ export default gql`
     extend type Mutation {
         createCourseResult(name: String!, score: Int!, learnerId: ID!): CourseResult
         deleteCourseResult(id: ID!): Boolean
-        updateCourseResult(id: ID!, name: String!, score: Int!, learnerId: ID!): CourseResult
+        updateCourseResult(id: ID!, name: String, score: Int, learnerId: ID!): CourseResult
     }
 `

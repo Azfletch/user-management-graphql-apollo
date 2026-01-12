@@ -11,12 +11,13 @@ export const CREATE_COURSE_RESULT = gql`
   }
 `
 
-export const UPDATE_USER = gql`
-  mutation updateCourseResult($id: ID!, $name: String, $score: String) {
-    updateCourseResult(id: $id, name: $name, score: $score) {
+export const UPDATE_COURSE_RESULT = gql`
+  mutation updateCourseResult($id: ID!, $name: String, $score: Int, $learnerId: ID!) {
+    updateCourseResult(id: $id, name: $name, score: $score, learnerId: $learnerId) {
       id
       name
       score
+      learnerId
     }
   }
 ` 
