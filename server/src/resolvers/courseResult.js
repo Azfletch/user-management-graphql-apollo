@@ -1,3 +1,5 @@
+import { randomUUID } from 'crypto'
+
 export default {
   CourseResult: {
     name: async (parent, args, context, info) => parent.name,
@@ -15,6 +17,7 @@ export default {
   Mutation: {
     createCourseResult: async (parent, { name, score, learnerId }, { db }, info) => {
       const newResult = {
+        id: randomUUID(),
         learnerId,
         name,
         score
@@ -23,13 +26,25 @@ export default {
 
       return newResult
     },
-    deleteCourseResult: async (parent, { learnerId }, { db }, info) => {
-      db.data.courseResults = db.data.courseResults.filter(result => result.learnerId !== learnerId)
+    deleteCourseResult: async (parent, { id }, { db }, info) => {
+      db.data.courseResults = db.data.courseResults.filter(result => result.id !== id)
 
       return true
     },
-    updateCourseResult: async (parent, { id, firstName, lastName, email }, { db }, info) => {
-      // ToDo: Update course
+    updateCourseResult: async (parent, { id, name, score }, { db }, info) => {
+      db.data.courseResults = db.data.courseResults.map(result => {
+        if (result.id === id) {
+          return {
+            ...result,
+            name,
+            score,
+          }
+        }
+
+        return result
+      })
+
+      return db.data.courseResults.find(result => result.id === id)
     }
   }
 }
