@@ -31,6 +31,7 @@ export default {
     },
     deleteUser: async (_, { id }, { db }) => {
       db.data.users = db.data.users.filter(user => user.id !== id)
+      await db.write()
 
       return true
     },

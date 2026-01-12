@@ -25,12 +25,6 @@
       "email": "minnie@test.com"
     },
     {
-      "id": "f05b3490-f812-43b3-b661-be4f57fc519a",
-      "firstName": "Donald",
-      "lastName": "Trump",
-      "email": "donald@example.com"
-    },
-    {
       "id": "56ffb4ed-6afc-4e2f-9dc2-1921a8d8df32",
       "firstName": "Michael",
       "lastName": "Jordan",
@@ -63,16 +57,10 @@
       "score": 95
     },
     {
-      "id": "2b890c6e-52df-4c57-aec6-b7fe217b52f6",
-      "learnerId": "bc3e02fa-8a5e-4c1c-b78a-9dad0505875k",
-      "name": "My Course",
-      "score": 96
-    },
-    {
       "id": "e0625524-dceb-47af-9119-4b36376034bd",
       "learnerId": "bc3e02fa-8a5e-4c1c-b78a-9dad0505875k",
       "name": "Super Course",
-      "score": 97
+      "score": 75
     },
     {
       "id": "62249286-41d3-47c4-abc4-3ac9ac4eaccd",

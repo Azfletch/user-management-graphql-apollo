@@ -28,6 +28,7 @@ export default {
     },
     deleteCourseResult: async (parent, { id }, { db }, info) => {
       db.data.courseResults = db.data.courseResults.filter(result => result.id !== id)
+      await db.write()
 
       return true
     },
@@ -43,6 +44,8 @@ export default {
 
         return result
       })
+
+      await db.write()
 
       return db.data.courseResults.find(result => result.id === id)
     }
