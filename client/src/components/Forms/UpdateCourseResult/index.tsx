@@ -31,7 +31,7 @@ const UpdateCourseResultForm = ({ result, setShowUserModal, setShowResultModal }
       }}>
         <input ref={nameRef} placeholder='Course Name' />
         <input ref={scoreRef} placeholder='Course Score' />
-        <button type="submit">Update Course Result</button>
+        <button type='submit'>Update Course Result</button>
       </form>
     </div>
   )

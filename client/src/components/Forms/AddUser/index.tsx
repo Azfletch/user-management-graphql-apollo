@@ -30,7 +30,7 @@ const AddUserForm = ({ setShowAddUserModal }: Props) => {
         <input ref={firstNameRef} placeholder='First Name' />
         <input ref={lastNameRef} placeholder='Last Name' />
         <input ref={emailRef} placeholder='Email' type='email' />
-        <button type="submit">Create User</button>
+        <button type='submit'>Create User</button>
       </form>
     </div>
   )

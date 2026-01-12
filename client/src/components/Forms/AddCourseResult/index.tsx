@@ -30,7 +30,7 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultForm, setShowUserModa
       }}>
         <input ref={nameRef} placeholder='Course Name' />
         <input ref={scoreRef} placeholder='Score' />
-        <button type="submit">Create Course Result</button>
+        <button type='submit'>Create Course Result</button>
       </form>
     </div>
   )

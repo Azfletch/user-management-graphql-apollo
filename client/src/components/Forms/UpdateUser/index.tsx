@@ -32,7 +32,7 @@ const UpdateUserForm = ({ user, setShowUserModal }: Props) => {
         <input ref={firstNameRef} placeholder='First Name' />
         <input ref={lastNameRef} placeholder='Last Name' />
         <input ref={emailRef} placeholder='Email' type='email' />
-        <button type="submit">Update User</button>
+        <button type='submit'>Update User</button>
       </form>
     </div>
   )

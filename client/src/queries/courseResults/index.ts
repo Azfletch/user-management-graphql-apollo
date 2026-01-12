@@ -1,4 +1,4 @@
-import { gql } from "@apollo/client";
+import { gql } from '@apollo/client';
 
 export const CREATE_COURSE_RESULT = gql`
   mutation createCourseResult($name: String!, $score: Int!, $learnerId: ID!) {

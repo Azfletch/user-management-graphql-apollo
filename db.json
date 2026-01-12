@@ -97,6 +97,12 @@
       "learnerId": "f05b3490-f812-43b3-b661-be4f57fc519a",
       "name": "my course",
       "score": 98
+    },
+    {
+      "id": "44f93fbb-9311-4633-a498-9411d0e58166",
+      "learnerId": "06d6de89-3ee7-4444-8242-55e7596a6a06",
+      "name": "Minnie Course",
+      "score": 100
     }
   ]
 }

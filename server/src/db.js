@@ -2,7 +2,7 @@ import { fileURLToPath } from 'node:url'
 import { join, dirname } from 'node:path'
 import { Low } from 'lowdb'
 import lodash from 'lodash'
-import {JSONFile} from "lowdb/node"
+import {JSONFile} from 'lowdb/node'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const file = join(__dirname, '../../db.json')
@@ -11,7 +11,7 @@ const file = join(__dirname, '../../db.json')
 // Like: db.chain.get('posts').find({ id: 1 }).value()
 // Note you have to use .chain - You also aren't required to use this at all.
 class LowWithLodash extends Low {
-	chain = lodash.chain(this).get("data")
+	chain = lodash.chain(this).get('data')
 }
 
 // https://github.com/typicode/lowdb
