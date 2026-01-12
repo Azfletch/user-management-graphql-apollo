@@ -9,7 +9,10 @@ import './index.scss'
 const AddCourseResultModal = ({ setShowAddCourseResultModal, setShowUserModal, user }: Props) => {
   return (
     <div className='add-course-result-modal'>
-      <button className='add-course-result-modal-overlay'></button>
+      <button
+        className='add-course-result-modal-overlay'
+        onClick={() => setShowAddCourseResultModal(false)}
+      />
 
       <div className='add-course-result-modal-content'>
         <div className='add-course-result-modal-content-header'>
@@ -19,7 +22,6 @@ const AddCourseResultModal = ({ setShowAddCourseResultModal, setShowUserModal, u
 
           <button className='add-course-result-modal-content-header-button' onClick={() => {
               setShowAddCourseResultModal(false)
-              setShowUserModal(false)
             }}
           >
             <Close />

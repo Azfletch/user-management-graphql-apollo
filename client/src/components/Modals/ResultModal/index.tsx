@@ -26,7 +26,10 @@ const ResultModal = ({ result, setShowUserModal, setShowResultModal }: Props) =>
 
   return (
     <div className='result-modal'>
-      <button className='result-modal-overlay' onClick={() => setShowUserModal(false)}></button>
+      <button
+        className='result-modal-overlay'
+        onClick={() => setShowResultModal(false)}
+      />
 
       <div className='result-modal-content'>
         <div className='result-modal-content-header'>

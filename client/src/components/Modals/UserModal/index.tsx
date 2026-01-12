@@ -28,7 +28,10 @@ const UserModal = ({ user, setShowUserModal, setShowAddCourseResultModal, setSel
 
   return (
     <div className='user-modal'>
-      <button className='user-modal-overlay' onClick={() => setShowUserModal(false)}></button>
+      <button
+        className='user-modal-overlay'
+        onClick={() => setShowUserModal(false)}
+      />
 
       <div className='user-modal-content'>
         <div className='user-modal-content-header'>
