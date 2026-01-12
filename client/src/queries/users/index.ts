@@ -11,6 +11,7 @@ export const GET_USERS = gql`
         learnerId
         name
         score
+        id
       }
     }
   }
@@ -28,7 +29,7 @@ export const CREATE_USER = gql`
 `
 
 export const UPDATE_USER = gql`
-  mutation updateUser( $id: ID!, $firstName: String, $lastName: String, $email: String) {
+  mutation updateUser($id: ID!, $firstName: String, $lastName: String, $email: String) {
     updateUser(id: $id, firstName: $firstName, lastName: $lastName, email: $email) {
       id
       firstName

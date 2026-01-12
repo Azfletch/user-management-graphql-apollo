@@ -4,12 +4,12 @@ import { useMutation } from '@apollo/client'
 import Close from '../../Icons/Close'
 import { GET_USERS } from '../../../queries/users'
 import type { CourseResult } from '../../../types/user'
-
-import './index.scss'
 import { DELETE_COURSE_RESULT } from '../../../queries/courseResults'
 
+import './index.scss'
+
 const ResultModal = ({ result, setShowUserModal, setShowResultModal }: Props) => {
-  const { name, learnerId, score } = result
+  const { name, score, id } = result
   const [deleteCourseResult] = useMutation(DELETE_COURSE_RESULT, {
     refetchQueries: [GET_USERS]
   })
@@ -18,7 +18,7 @@ const ResultModal = ({ result, setShowUserModal, setShowResultModal }: Props) =>
 
   const handleDelete = () => {
     deleteCourseResult({
-      variables: { learnerId }
+      variables: { id }
     })
     setShowResultModal(false)
   }

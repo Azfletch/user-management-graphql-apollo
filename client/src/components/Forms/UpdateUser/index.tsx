@@ -1,5 +1,6 @@
 import { useMutation } from '@apollo/client'
 import { useRef, type Dispatch, type SetStateAction } from 'react'
+
 import { GET_USERS, UPDATE_USER } from '../../../queries/users'
 import type { User } from '../../../types/user'
 

@@ -7,6 +7,7 @@ export type User = {
 }
 
 export type CourseResult = {
+  id: string
   name: string
   score: number
   learnerId: string

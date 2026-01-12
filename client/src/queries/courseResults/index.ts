@@ -6,12 +6,23 @@ export const CREATE_COURSE_RESULT = gql`
       learnerId
       name
       score
+      id
     }
   }
 `
 
+export const UPDATE_USER = gql`
+  mutation updateCourseResult($id: ID!, $name: String, $score: String) {
+    updateCourseResult(id: $id, name: $name, score: $score) {
+      id
+      name
+      score
+    }
+  }
+` 
+
 export const DELETE_COURSE_RESULT = gql`
-  mutation deleteCourseResult($learnerId: ID!) {
-    deleteCourseResult(learnerId: $learnerId)
+  mutation deleteCourseResult($id: ID!) {
+    deleteCourseResult(id: $id)
   }
 `;

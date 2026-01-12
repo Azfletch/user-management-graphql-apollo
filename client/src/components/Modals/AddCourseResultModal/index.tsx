@@ -2,9 +2,9 @@ import type { Dispatch, SetStateAction } from 'react'
 
 import Close from '../../Icons/Close'
 import AddCourseResultForm from '../../Forms/AddCourseResult'
+import type { User } from '../../../types/user'
 
 import './index.scss'
-import type { User } from '../../../types/user'
 
 const AddCourseResultModal = ({ setShowAddCourseResultModal, setShowUserModal, user }: Props) => {
   return (

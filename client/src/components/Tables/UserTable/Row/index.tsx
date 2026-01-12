@@ -1,9 +1,9 @@
 import { type Dispatch, type SetStateAction } from 'react'
 
 import type { User } from '../../../../types/user'
+import { userTableColumns } from '../../../../lib/sorting'
 
 import './index.scss'
-import { userTableColumns } from '../../../../lib/sorting'
 
 const UserTableRow = ({ user, setShowUserModal, setSelectedUser }: Props) => {
   const handleRowClick = () => {

@@ -1,4 +1,5 @@
 import type { Dispatch, SetStateAction } from 'react'
+
 import './index.scss'
 
 const DeleteUserModal = ({setShowDeleteUserModal}: Props) => {

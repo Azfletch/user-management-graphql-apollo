@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
-import type { CourseResult, User } from '../../../../types/user'
-import UserTableRow from '../Row';
-import UserModal from '../../../Modals/UserModal';
-import { sortUsers } from '../../../../lib/sorting';
+
 import AddCourseResultModal from '../../../Modals/AddCourseResultModal';
 import ResultModal from '../../../Modals/ResultModal';
+import UserModal from '../../../Modals/UserModal';
+import UserTableRow from '../Row';
+import { sortUsers } from '../../../../lib/sorting';
+import type { CourseResult, User } from '../../../../types/user'
 
 const UserTableRows = ({ users, sortKey, isReverse }: Props) => {
   const [sortedUsers, setSortedUsers] = useState<User[]>(users);
@@ -16,11 +17,11 @@ const UserTableRows = ({ users, sortKey, isReverse }: Props) => {
     courseResults: []
   });
   const [selectedResult, setSelectedResult] = useState<CourseResult>({
+    id: '',
     learnerId: '',
     name: '',
     score: 0
   });
-  console.log({selectedResult})
   const [showResultModal, setShowResultModal] = useState<boolean>(false)
   const [showUserModal, setShowUserModal] = useState<boolean>(false)
   const [showAddCourseResultModal, setShowAddCourseResultModal] = useState<boolean>(false);
@@ -72,8 +73,6 @@ const UserTableRows = ({ users, sortKey, isReverse }: Props) => {
           setShowUserModal={setShowUserModal}
         />
       )}
-
-
     </div>
   )
 }

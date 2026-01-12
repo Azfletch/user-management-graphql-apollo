@@ -1,12 +1,11 @@
-import type { Dispatch, SetStateAction } from "react"
+import type { Dispatch, SetStateAction } from 'react'
+import classNames from 'classnames';
 
-
-import Arrow from "../../Icons/Arrow";
-import Sort from "../../Icons/Sort";
-import classNames from "classnames";
+import Arrow from '../../Icons/Arrow';
+import Sort from '../../Icons/Sort';
+import type { TableColumns } from '../../../types/tables';
 
 import './index.scss'
-import type { TableColumns } from "../../../types/tables";
 
 const TableSorter = ({sortKey, isReverse, setIsReverse, setSortKey, tableColumns}: Props) => {
   return (
@@ -35,7 +34,7 @@ const TableSorter = ({sortKey, isReverse, setIsReverse, setSortKey, tableColumns
           >
             {column && column.title}
 
-            <div className="table-sorter-cell-icon">
+            <div className='table-sorter-cell-icon'>
               {isCurrentColumn ?
                 <Arrow direction={isReverse ? 'down' : 'up'} /> :
                 <Sort />

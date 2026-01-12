@@ -1,8 +1,9 @@
+import type { Dispatch, SetStateAction } from 'react'
+
+import { courseResultTableColumns } from '../../../../lib/sorting'
 import type { CourseResult } from '../../../../types/user'
 
 import './index.scss'
-import { courseResultTableColumns } from '../../../../lib/sorting'
-import type { Dispatch, SetStateAction } from 'react'
 
 const ResultTableRow = ({ result, setSelectedResult, setShowResultModal, setShowUserModal }: Props) => {
   const handleRowClick = () => {

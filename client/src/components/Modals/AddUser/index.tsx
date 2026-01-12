@@ -1,7 +1,9 @@
 import type { Dispatch, SetStateAction } from 'react'
-import './index.scss'
-import Close from '../../Icons/Close'
+
 import AddUserForm from '../../Forms/AddUser'
+import Close from '../../Icons/Close'
+
+import './index.scss'
 
 const AddUserModal = ({setShowAddUserModal}: Props) => {
   return (
@@ -22,8 +24,6 @@ const AddUserModal = ({setShowAddUserModal}: Props) => {
         <div className='add-user-modal-content-form'>
           <AddUserForm setShowAddUserModal={setShowAddUserModal} />
         </div>
-        
-
       </div>
     </div>
   )
