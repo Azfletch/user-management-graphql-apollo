@@ -40,7 +40,7 @@ const UpdateCourseResultForm = ({ result, setShowUserModal, setShowResultModal }
 type Props = {
   result: CourseResult
   setShowUserModal: Dispatch<SetStateAction<boolean>>
-  setShowUpdateCourseResultForm: Dispatch<SetStateAction<boolean>>
+  setShowResultModal: Dispatch<SetStateAction<boolean>>
 }
 
 export default UpdateCourseResultForm

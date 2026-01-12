@@ -50,6 +50,8 @@ export default {
         return user
       })
 
+      await db.write()
+
       return db.data.users.find(user => user.id === id)
     }
   }
