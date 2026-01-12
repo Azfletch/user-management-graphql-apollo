@@ -2,8 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-import './index.css'
-import App from './App.tsx'
+import App from './components/App'
+
+import './index.scss'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/graphql';
 

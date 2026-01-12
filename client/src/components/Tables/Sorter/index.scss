@@ -1,0 +1,32 @@
+.table-sorter {
+  background-color: #E8E8E8;
+  border-radius: 8px;
+  color: #344054;
+  display: flex;
+  font-family: 'Roboto';
+  font-size: 18px;
+  line-height: 28px;
+  width: 100%;
+
+  &-cell {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding: 12px 24px;
+    text-align: left;
+    width: 205px;
+
+    &-selected {
+      color: #101828;
+    }
+
+    &-icon {
+      align-items: center;
+      display: flex;
+      height: 24px;
+      justify-content: center;
+      margin-left: 8px;
+      width: 24px;
+    }
+  }
+}

@@ -3,7 +3,7 @@ import gql from 'graphql-tag'
 export default gql`
     extend type Query {
         courseResults: [CourseResult!]
-        courseResult(id: ID!): CourseResult!
+        courseResult(learnerId: ID!): CourseResult!
     }
     
     # This allows us to query Users->CourseResults
@@ -17,10 +17,9 @@ export default gql`
         learnerId: ID!
     }
 
-    # ToDo: Implement CRUD mutations
     extend type Mutation {
         createCourseResult(name: String!, score: Int!, learnerId: ID!): CourseResult
-        deleteCourseResult(id: ID!): Boolean
+        deleteCourseResult(learnerId: ID!): Boolean
         updateCourseResult(id: ID!, name: String!, score: Int!, learnerId: ID!): CourseResult
     }
 `

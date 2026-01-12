@@ -1,0 +1,82 @@
+.user-modal {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  &-content {
+    background-color: #fff;
+    box-shadow: #0000001a 5px 5px 20px;
+    margin: auto;
+    outline: none;
+    position: relative;
+    width: 600px;
+    height: 400px;
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 340px;
+
+      padding: 8px 16px;
+    }
+
+    &-course-results {
+      &-text {
+        text-align: left;
+        font-family: 'Roboto';
+        font-size: 18px;
+      }
+    }
+
+    &-controls {
+      display: flex;
+      font-family: 'Roboto';
+      
+      justify-content: space-between;
+
+      &-edit {
+        margin-right: 8px;
+      }
+    }
+
+    &-header {
+      background-color: #E8E8E8;
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 16px;
+      height: 60px;
+      align-items: center;
+  
+      &-title {
+        font-family: 'Roboto';
+        font-size: 20px;
+      }
+  
+      &-button {
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid black;
+        height: 24px;
+        width: 24px
+      }
+    }
+  }
+
+  &-overlay {
+    background-color: #00000080;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

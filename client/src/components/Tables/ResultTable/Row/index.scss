@@ -1,0 +1,16 @@
+.result-table-row {
+  display: flex;
+  cursor: pointer;
+  border-radius: 8px;
+
+  &-cell {
+    width: 205px;
+    padding: 12px 24px;
+    font-family: 'Roboto';
+    text-align: left;
+  }
+
+  &:hover {
+    background-color: aqua;
+  }
+}

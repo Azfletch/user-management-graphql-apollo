@@ -14,6 +14,7 @@ class LowWithLodash extends Low {
 	chain = lodash.chain(this).get("data")
 }
 
+// https://github.com/typicode/lowdb
 const adapter = new JSONFile(file)
 const db = new LowWithLodash(adapter, { users: [], courseResults: [] })
 await db.read()

@@ -18,7 +18,7 @@ export default {
     }
   },
   Mutation: {
-    createUser: async (parent, { lastName, email }, { db }, info) => {
+    createUser: async (parent, { firstName, lastName, email }, { db }, info) => {
       const newUser = {
         id: randomUUID(),
         firstName,
@@ -29,11 +29,27 @@ export default {
 
       return newUser
     },
-    deleteUser: async (parent, { userId }, { db }, info) => {
-      // ToDo: Delete user
+    deleteUser: async (_, { id }, { db }) => {
+      db.data.users = db.data.users.filter(user => user.id !== id)
+
+      return true
     },
-    updateUser: async (parent, { id, firstName, lastName, email }, { db }, info) => {
-      // ToDo: Update user
+    updateUser: async (_, { id, firstName, lastName, email }, { db }, info) => {
+      db.data.users = db.data.users.map(user => {
+        if (user.id === id) {
+          return {
+            ...user,
+            id,
+            firstName,
+            lastName,
+            email
+          }
+        }
+
+        return user
+      })
+
+      return db.data.users.find(user => user.id === id)
     }
   }
 }
