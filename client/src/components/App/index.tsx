@@ -7,7 +7,6 @@ import './index.scss'
 
 const App = () => {
   const [showAddUserModal, setShowAddUserModal] = useState<boolean>(false);
-  const [showDeleteUserModal, setShowDeleteUserModal] = useState<boolean>(false);
 
   return (
     <div className='app'>
@@ -16,9 +15,7 @@ const App = () => {
       />
       <Users
         showAddUserModal={showAddUserModal}
-        showDeleteUserModal={showDeleteUserModal}
         setShowAddUserModal={setShowAddUserModal}
-        setShowDeleteUserModal={setShowDeleteUserModal}
       />
     </div>
   )
