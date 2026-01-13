@@ -1,7 +1,7 @@
 import { render, fireEvent, waitFor } from '@testing-library/react';
 import Header from './';
 
-describe('Header Component', () => {
+describe('<Header />', () => {
   test('renders correctly', () => {
     const { getByTestId } = render(<Header setShowAddUserModal={vi.fn()}/>);
 

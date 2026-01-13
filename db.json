@@ -19,22 +19,22 @@
       "email": "don@test.com"
     },
     {
-      "id": "06d6de89-3ee7-4444-8242-55e7596a6a06",
-      "firstName": "Janet",
-      "lastName": "Mouse",
-      "email": "minnie@test.com"
-    },
-    {
       "id": "56ffb4ed-6afc-4e2f-9dc2-1921a8d8df32",
       "firstName": "Michael",
       "lastName": "Jordan",
-      "email": "mike@test.com"
+      "email": "mike@example.com"
     },
     {
       "id": "555e509f-8463-4e1f-9625-1a8c5df108af",
       "firstName": "Dennis",
       "lastName": "Rodman",
       "email": "dennis@test.com"
+    },
+    {
+      "id": "dbb600b7-24ab-43bf-ba4e-d851e50614d8",
+      "firstName": "Scottie",
+      "lastName": "Pippin",
+      "email": "scott@test.com"
     }
   ],
   "courseResults": [
@@ -101,6 +101,12 @@
     {
       "id": "a5ace28e-8887-4f8e-8fdb-039c3d272fb1",
       "learnerId": "56ffb4ed-6afc-4e2f-9dc2-1921a8d8df32",
+      "name": "NBA Course",
+      "score": 100
+    },
+    {
+      "id": "62220fec-d450-4364-9953-07132dadc221",
+      "learnerId": "dbb600b7-24ab-43bf-ba4e-d851e50614d8",
       "name": "NBA Course",
       "score": 100
     }

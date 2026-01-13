@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { MockedProvider } from "@apollo/client/testing";
+import { MockedProvider } from '@apollo/client/testing';
 import { render, waitFor } from '@testing-library/react';
 
 import App from './';
@@ -14,10 +14,10 @@ const mocks = [
       data: {
         users: [
           {
-            id: "123",
-            email: "testuser@test.com",
-            firstName: "Test",
-            lastName: "User",
+            id: '123',
+            email: 'testuser@test.com',
+            firstName: 'Test',
+            lastName: 'User',
             courseResults: [],
           }
         ],
@@ -26,7 +26,7 @@ const mocks = [
   },
 ];
 
-describe('App Component', () => {
+describe('<App />', () => {
   test('renders correctly', async () => {
     const { getByTestId } = render(
       <MockedProvider mocks={mocks}>

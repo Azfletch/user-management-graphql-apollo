@@ -1,20 +1,23 @@
-import type { Ref } from "react"
+import type { Ref } from 'react'
 
 import './index.scss'
 
-const Input = ({ label, ref, type }: Props) => {
-  return (
-    <div className='input'>
-      {label && <div className="input-label">{label}</div>}
+const Input = ({ label, ref, type }: Props) => (
+  <div className='input' data-test-id='input'>
+    {label &&
+      <div className='input-label' data-test-id='input-label'>
+        {label}
+      </div>
+    }
 
-      <input
-        className='input-field'
-        ref={ref}
-        type={type}
-      />
-    </div>
-  )
-}
+    <input
+      className='input-field'
+      data-test-id='input-field'
+      ref={ref}
+      type={type}
+    />
+  </div>
+)
 
 type Props = {
   className?: string
