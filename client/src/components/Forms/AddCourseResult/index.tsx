@@ -19,7 +19,7 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserMod
   return (
     <div>
       <form
-        className='update-result-form'
+        className='add-result-form'
         onSubmit={e => {
           e.preventDefault()
           createCourseResult({

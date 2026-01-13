@@ -9,7 +9,7 @@ const App = () => {
   const [showAddUserModal, setShowAddUserModal] = useState<boolean>(false);
 
   return (
-    <div className='app'>
+    <div className='app' data-test-id='app'>
       <Header
         setShowAddUserModal={setShowAddUserModal}
       />

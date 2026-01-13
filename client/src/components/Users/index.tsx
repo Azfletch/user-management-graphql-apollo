@@ -10,12 +10,11 @@ import './index.scss'
 const Users = ({ showAddUserModal, setShowAddUserModal }: Props) => {
   const { loading, error, data } = useQuery(GET_USERS)
 
-
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error!</p>
 
   return (
-    <div className='users'>
+    <div className='users' data-test-id='users'>
       <UserTable users={data.users} />
 
       {showAddUserModal && (
