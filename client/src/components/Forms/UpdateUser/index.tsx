@@ -1,9 +1,10 @@
 import { useMutation } from '@apollo/client'
 import { useRef, type Dispatch, type SetStateAction } from 'react'
 
+import Button from '../../Button'
+import Input from '../../Input'
 import { GET_USERS, UPDATE_USER } from '../../../queries/users'
 import type { User } from '../../../types/user'
-import Button from '../../Button'
 
 import './index.scss'
 
@@ -36,9 +37,19 @@ const UpdateUserForm = ({ user, setShowUserModal, setIsInUpdateUserMode }: Props
         }}
       >
         <div className='update-user-form-inputs'>
-          <input ref={firstNameRef} placeholder='First Name' />
-          <input ref={lastNameRef} placeholder='Last Name' />
-          <input ref={emailRef} placeholder='Email' type='email' />
+          <Input
+            label='First Name'
+            ref={firstNameRef}
+          />
+          <Input
+            label='First Name'
+            ref={lastNameRef}
+          />
+          <Input
+            label='Email'
+            ref={emailRef}
+            type='email'
+          />
         </div>
         <div className='update-user-form-controls'>
           <Button onClick={() => setIsInUpdateUserMode(false)} isSecondary>

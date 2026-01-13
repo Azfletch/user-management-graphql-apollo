@@ -29,6 +29,12 @@
       "firstName": "Michael",
       "lastName": "Jordan",
       "email": "mike@test.com"
+    },
+    {
+      "id": "555e509f-8463-4e1f-9625-1a8c5df108af",
+      "firstName": "Dennis",
+      "lastName": "Rodman",
+      "email": "dennis@test.com"
     }
   ],
   "courseResults": [
@@ -72,7 +78,7 @@
       "id": "61015127-e7d2-48ca-84d4-df4bdfc57ee8",
       "learnerId": "e1ffdfd9-4a42-48e0-8d1f-cfba049acad0",
       "name": "Duck Course",
-      "score": 10
+      "score": 88
     },
     {
       "id": "ec8586ac-080d-4d48-997e-604d4ef77349",

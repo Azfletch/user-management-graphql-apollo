@@ -1,0 +1,19 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+
+  &-label {
+    text-align: left;
+    font-family: 'Roboto';
+    font-size: 14px;
+  }
+
+  &-field {
+    border: 1px solid grey;
+    border-radius: 4px;
+    height: 32px;
+    font-family: 'Roboto';
+    font-size: 14px;
+  }
+}

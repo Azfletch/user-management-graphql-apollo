@@ -1,10 +1,11 @@
 import { useMutation } from '@apollo/client'
 import { useRef, type Dispatch, type SetStateAction } from 'react'
 
-import { GET_USERS } from '../../../queries/users'
-import type { CourseResult } from '../../../types/user'
-import { UPDATE_COURSE_RESULT } from '../../../queries/courseResults'
 import Button from '../../Button'
+import Input from '../../Input'
+import { GET_USERS } from '../../../queries/users'
+import { UPDATE_COURSE_RESULT } from '../../../queries/courseResults'
+import type { CourseResult } from '../../../types/user'
 
 import './index.scss'
 
@@ -36,8 +37,14 @@ const UpdateCourseResultForm = ({ result, setShowUserModal, setShowResultModal, 
         }}
       >
         <div className='update-result-form-inputs'>
-          <input ref={nameRef} placeholder='Course Name' />
-          <input ref={scoreRef} placeholder='Course Score' />
+          <Input
+            label='Course Name'
+            ref={nameRef}
+          />
+          <Input
+            label='Course Score'
+            ref={scoreRef}
+          />
         </div>
         <div className='update-result-form-controls'>
           <Button isSecondary onClick={() => setIsInUpdateResultMode(false)}>

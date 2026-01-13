@@ -1,0 +1,17 @@
+.add-user-form {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px;
+
+  &-controls {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+}

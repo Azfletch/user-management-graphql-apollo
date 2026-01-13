@@ -1,10 +1,11 @@
 import { useMutation } from '@apollo/client'
 import { useRef, type Dispatch, type SetStateAction } from 'react'
 
+import Button from '../../Button'
+import Input from '../../Input'
 import { GET_USERS } from '../../../queries/users'
 import { CREATE_COURSE_RESULT } from '../../../queries/courseResults'
 import type { User } from '../../../types/user'
-import Button from '../../Button'
 
 import './index.scss'
 
@@ -35,8 +36,14 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserMod
         }}
       >
         <div className='add-result-form-inputs'>
-          <input ref={nameRef} placeholder='Course Name' />
-          <input ref={scoreRef} placeholder='Score' />
+          <Input
+            label='Course Name'
+            ref={nameRef}
+          />
+          <Input
+            label='Course Score'
+            ref={scoreRef}
+          />
         </div>
         <div className='add-result-form-controls'>
           <Button
