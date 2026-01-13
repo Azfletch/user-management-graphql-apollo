@@ -31,17 +31,10 @@ const AddCourseResultModal = ({ setShowAddCourseResultModal, setShowUserModal, u
         <div className='add-course-result-modal-content-form'>
           <AddCourseResultForm
             user={user}
-            setShowAddCourseResultForm={setShowAddCourseResultModal}
+            setShowAddCourseResultModal={setShowAddCourseResultModal}
             setShowUserModal={setShowUserModal}
           />
         </div>
-
-        <button onClick={() => {
-          setShowUserModal(true)
-          setShowAddCourseResultModal(false)
-        }}>
-          Back To User Modal
-        </button>
       </div>
     </div>
   )

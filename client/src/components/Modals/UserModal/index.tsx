@@ -8,6 +8,7 @@ import { DELETE_USER, GET_USERS } from '../../../queries/users'
 import type { CourseResult, User } from '../../../types/user'
 
 import './index.scss'
+import Button from '../../Button'
 
 const UserModal = ({ user, setShowUserModal, setShowAddCourseResultModal, setSelectedResult, setShowResultModal }: Props) => {
   const { firstName, lastName, courseResults } = user
@@ -62,31 +63,41 @@ const UserModal = ({ user, setShowUserModal, setShowAddCourseResultModal, setSel
 
             <div className='user-modal-content-controls'>
               <div>
-                <button onClick={() => setIsInUpdateUserMode(true)} className='user-modal-content-controls-edit'>
+                <Button
+                  className='user-modal-content-controls-edit'
+                  isSecondary
+                  onClick={() => setIsInUpdateUserMode(true)}
+                >
                   Update User
-                </button>
-
-                <button onClick={handleDelete} className='user-modal-content-body-button-delete'>
+                </Button>
+                  
+                <Button
+                  isDanger
+                  onClick={handleDelete}
+                >
                   Delete User
-                </button>
+                </Button>
               </div>
 
-              <button
+              
+              <Button
                 onClick={() => {
                   setShowUserModal(false)
                   setShowAddCourseResultModal(true)
                 }}
-                className='user-modal-content-body-button-add-course'
               >
                 Add Course Result
-              </button>
+              </Button>
             </div>
 
           </div>
         ) : (
           <div className='user-modal-content-body'>
-              <UpdateUserForm user={user} setShowUserModal={setShowUserModal} />
-              <button onClick={() => setIsInUpdateUserMode(false)}>Back</button>
+              <UpdateUserForm
+                user={user}
+                setShowUserModal={setShowUserModal}
+                setIsInUpdateUserMode={setIsInUpdateUserMode}
+              />
           </div>
         )}
       </div>

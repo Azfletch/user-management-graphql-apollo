@@ -20,7 +20,7 @@
     },
     {
       "id": "06d6de89-3ee7-4444-8242-55e7596a6a06",
-      "firstName": "Minnie",
+      "firstName": "Janet",
       "lastName": "Mouse",
       "email": "minnie@test.com"
     },
@@ -90,6 +90,12 @@
       "id": "44f93fbb-9311-4633-a498-9411d0e58166",
       "learnerId": "06d6de89-3ee7-4444-8242-55e7596a6a06",
       "name": "Minnie Course",
+      "score": 100
+    },
+    {
+      "id": "a5ace28e-8887-4f8e-8fdb-039c3d272fb1",
+      "learnerId": "56ffb4ed-6afc-4e2f-9dc2-1921a8d8df32",
+      "name": "NBA Course",
       "score": 100
     }
   ]

@@ -1,0 +1,37 @@
+.button {
+  background-color: #2a5fc9;
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Roboto';
+  font-size: 18px;
+  outline: 0;
+  padding: 8px 12px;
+  text-align: center;
+
+  &-primary {
+    &:disabled {
+      background-color: #a0b4f4;
+    }
+  }
+
+  &-secondary {
+    background-color: transparent;
+    border: 1px solid #2a5fc9;
+    color: #2a5fc9;
+
+    &:disabled {
+      background-color: transparent;
+      border: 1px solid #a0b4f4;
+      color: #a0b4f4
+    }
+  }
+
+  &-danger {
+    background-color: #f44336;
+    border: 1px solid #f44336;
+    font-size: 18px;
+  }
+}
+

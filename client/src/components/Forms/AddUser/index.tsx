@@ -1,6 +1,7 @@
 import { useMutation } from '@apollo/client'
 import { useRef, type Dispatch, type SetStateAction } from 'react'
 
+import Button from '../../Button'
 import { CREATE_USER, GET_USERS } from '../../../queries/users'
 
 const AddUserForm = ({ setShowAddUserModal }: Props) => {
@@ -30,7 +31,7 @@ const AddUserForm = ({ setShowAddUserModal }: Props) => {
         <input ref={firstNameRef} placeholder='First Name' />
         <input ref={lastNameRef} placeholder='Last Name' />
         <input ref={emailRef} placeholder='Email' type='email' />
-        <button type='submit'>Create User</button>
+        <Button type='submit'>Create User</Button>
       </form>
     </div>
   )

@@ -4,8 +4,11 @@ import { useRef, type Dispatch, type SetStateAction } from 'react'
 import { GET_USERS } from '../../../queries/users'
 import { CREATE_COURSE_RESULT } from '../../../queries/courseResults'
 import type { User } from '../../../types/user'
+import Button from '../../Button'
 
-const AddCourseResultForm = ({ user, setShowAddCourseResultForm, setShowUserModal }: Props) => {
+import './index.scss'
+
+const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserModal }: Props) => {
   const nameRef = useRef<HTMLInputElement>(null)
   const scoreRef = useRef<HTMLInputElement>(null)
   const [createCourseResult] = useMutation(CREATE_COURSE_RESULT, {
@@ -14,23 +17,43 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultForm, setShowUserModa
 
   return (
     <div>
-      <form onSubmit={e => {
-        e.preventDefault()
-        createCourseResult({
-          variables: {
-            learnerId: user.id,
-            name: nameRef.current?.value || '',
-            score: Number(scoreRef.current?.value),
-          }
-        })
-        if (nameRef.current) nameRef.current.value = ''
-        if (scoreRef.current) scoreRef.current.value = ''
-        setShowAddCourseResultForm(false)
-        setShowUserModal(false)
-      }}>
-        <input ref={nameRef} placeholder='Course Name' />
-        <input ref={scoreRef} placeholder='Score' />
-        <button type='submit'>Create Course Result</button>
+      <form
+        className='update-result-form'
+        onSubmit={e => {
+          e.preventDefault()
+          createCourseResult({
+            variables: {
+              learnerId: user.id,
+              name: nameRef.current?.value || '',
+              score: Number(scoreRef.current?.value),
+            }
+          })
+          if (nameRef.current) nameRef.current.value = ''
+          if (scoreRef.current) scoreRef.current.value = ''
+          setShowAddCourseResultModal(false)
+          setShowUserModal(false)
+        }}
+      >
+        <div className='add-result-form-inputs'>
+          <input ref={nameRef} placeholder='Course Name' />
+          <input ref={scoreRef} placeholder='Score' />
+        </div>
+        <div className='add-result-form-controls'>
+          <Button
+            onClick={() => {
+              setShowUserModal(true)
+              setShowAddCourseResultModal(false)
+            }}
+            isSecondary
+          >
+            Back
+          </Button>
+          <Button
+            type='submit'
+          >
+            Create Course Result
+          </Button>
+        </div>
       </form>
     </div>
   )
@@ -38,7 +61,7 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultForm, setShowUserModa
 
 type Props = {
   user: User
-  setShowAddCourseResultForm: Dispatch<SetStateAction<boolean>>
+  setShowAddCourseResultModal: Dispatch<SetStateAction<boolean>>
   setShowUserModal: Dispatch<SetStateAction<boolean>>
 }
 

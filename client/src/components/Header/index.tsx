@@ -1,5 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react'
 
+import Button from '../Button'
+
 import './index.scss'
 
 const Header = ({ setShowAddUserModal }: Props) => {
@@ -9,12 +11,12 @@ const Header = ({ setShowAddUserModal }: Props) => {
         Users
       </div>
 
-      <button
+      <Button
         className='app-header-button'
         onClick={() => setShowAddUserModal(true)}
       >
         Add User
-      </button>
+      </Button>
     </div>
   )
 }

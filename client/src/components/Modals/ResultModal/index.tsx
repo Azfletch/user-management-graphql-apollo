@@ -8,6 +8,7 @@ import { DELETE_COURSE_RESULT } from '../../../queries/courseResults'
 
 import './index.scss'
 import UpdateCourseResultForm from '../../Forms/UpdateCourseResult'
+import Button from '../../Button'
 
 const ResultModal = ({ result, setShowUserModal, setShowResultModal }: Props) => {
   const { name, score, id } = result
@@ -48,13 +49,24 @@ const ResultModal = ({ result, setShowUserModal, setShowResultModal }: Props) =>
               Current Score: {score}
             </div>
             <div className='result-modal-content-controls'>
-              <button onClick={() => setIsInUpdateResultMode(true)} className='result-modal-content-controls-edit'>
-                Update Result
-              </button>
+              <Button
+                onClick={() => {
+                  setShowUserModal(true)
+                  setShowResultModal(false)
+                }}
+                isSecondary
+              >
+                Back
+              </Button>
+              <div>
+                <Button onClick={() => setIsInUpdateResultMode(true)} className='result-modal-content-controls-edit'>
+                  Update Result
+                </Button>
 
-              <button onClick={handleDelete} className='result-modal-content-body-button-delete'>
-                Delete Result
-              </button>
+                <Button onClick={handleDelete} className='result-modal-content-body-button-delete' isDanger>
+                  Delete Result
+                </Button>
+              </div>
             </div>
 
           </div>
@@ -64,8 +76,8 @@ const ResultModal = ({ result, setShowUserModal, setShowResultModal }: Props) =>
                 result={result}
                 setShowUserModal={setShowUserModal}
                 setShowResultModal={setShowResultModal}
+                setIsInUpdateResultMode={setIsInUpdateResultMode}
               />
-            <button onClick={() => setIsInUpdateResultMode(false)}>Back</button>
           </div>
         )}
       </div>

@@ -1,0 +1,16 @@
+.update-result-form {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-controls {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+}
