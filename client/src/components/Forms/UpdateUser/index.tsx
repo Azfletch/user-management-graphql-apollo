@@ -20,6 +20,7 @@ const UpdateUserForm = ({ user, setShowUserModal, setIsInUpdateUserMode }: Props
     <div>
       <form
         className='update-user-form'
+        data-test-id='update-user-form'
         onSubmit={e => {
           e.preventDefault()
           updateUser({
@@ -36,13 +37,13 @@ const UpdateUserForm = ({ user, setShowUserModal, setIsInUpdateUserMode }: Props
           setShowUserModal(false)
         }}
       >
-        <div className='update-user-form-inputs'>
+        <div className='update-user-form-inputs' data-test-id='update-user-form-inputs'>
           <Input
             label='First Name'
             ref={firstNameRef}
           />
           <Input
-            label='First Name'
+            label='Last Name'
             ref={lastNameRef}
           />
           <Input
@@ -52,10 +53,17 @@ const UpdateUserForm = ({ user, setShowUserModal, setIsInUpdateUserMode }: Props
           />
         </div>
         <div className='update-user-form-controls'>
-          <Button onClick={() => setIsInUpdateUserMode(false)} isSecondary>
+          <Button
+            dataTestId='update-user-form-back-button'
+            isSecondary
+            onClick={() => setIsInUpdateUserMode(false)}
+          >
             Back
           </Button>
-          <Button type='submit'>
+          <Button
+            dataTestId='update-user-form-submit-button'
+            type='submit'
+          >
             Update User
           </Button>
         </div>

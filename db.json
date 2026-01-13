@@ -16,7 +16,7 @@
       "id": "e1ffdfd9-4a42-48e0-8d1f-cfba049acad0",
       "firstName": "Donald",
       "lastName": "Duck",
-      "email": "don@test.com"
+      "email": "donald.duck@test.com"
     },
     {
       "id": "56ffb4ed-6afc-4e2f-9dc2-1921a8d8df32",
@@ -81,12 +81,6 @@
       "score": 88
     },
     {
-      "id": "ec8586ac-080d-4d48-997e-604d4ef77349",
-      "learnerId": "e1ffdfd9-4a42-48e0-8d1f-cfba049acad0",
-      "name": "Disney Course",
-      "score": 65
-    },
-    {
       "id": "c4042b51-3396-4b72-b5e5-ce84688c7431",
       "learnerId": "f05b3490-f812-43b3-b661-be4f57fc519a",
       "name": "my course",
@@ -109,6 +103,36 @@
       "learnerId": "dbb600b7-24ab-43bf-ba4e-d851e50614d8",
       "name": "NBA Course",
       "score": 100
+    },
+    {
+      "id": "65a81b07-c1ab-4872-9387-79e94d768aef",
+      "learnerId": "555e509f-8463-4e1f-9625-1a8c5df108af",
+      "name": "Test Course",
+      "score": 12
+    },
+    {
+      "id": "ab65b192-6244-484a-9f1b-bf1a5a7e5d22",
+      "learnerId": "555e509f-8463-4e1f-9625-1a8c5df108af",
+      "name": "My Course",
+      "score": 14
+    },
+    {
+      "id": "4c491881-0932-4636-b322-9e2d7e805f58",
+      "learnerId": "555e509f-8463-4e1f-9625-1a8c5df108af",
+      "name": "Another Course",
+      "score": 15
+    },
+    {
+      "id": "3b9bb084-af6e-4db5-a821-d39ec670ce02",
+      "learnerId": "555e509f-8463-4e1f-9625-1a8c5df108af",
+      "name": "Final Course",
+      "score": 19
+    },
+    {
+      "id": "395e0133-8fe8-4bf1-a965-cb2d47a21bcf",
+      "learnerId": "55bdc42e-1317-4bc9-adb0-a8fd5ccd8d8d",
+      "name": "Disney Course",
+      "score": 92
     }
   ]
 }

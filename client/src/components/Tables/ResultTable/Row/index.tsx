@@ -1,7 +1,7 @@
 import type { Dispatch, SetStateAction } from 'react'
 
 import { courseResultTableColumns } from '../../../../lib/sorting'
-import type { CourseResult } from '../../../../types/user'
+import type { CourseResult } from '../../../../types/courseResult'
 
 import './index.scss'
 
@@ -13,12 +13,22 @@ const ResultTableRow = ({ result, setSelectedResult, setShowResultModal, setShow
   }
 
   return (
-    <div className='result-table-row' onClick={handleRowClick} >
+    <div
+      className='result-table-row'
+      data-test-id='result-table-row'
+      onClick={handleRowClick}
+    >
       {courseResultTableColumns.map((column, index) => {
         const value = String(result[column.sortKey as keyof CourseResult])
 
         return (
-          <div className='result-table-row-cell' key={index}>{value}</div>
+          <div
+            className='result-table-row-cell'
+            data-test-id='result-table-row-cell'
+            key={index}
+          >
+              {value}
+          </div>
         )
       })}
     </div>

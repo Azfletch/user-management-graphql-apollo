@@ -20,6 +20,7 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserMod
     <div>
       <form
         className='add-result-form'
+        data-test-id='add-result-form'
         onSubmit={e => {
           e.preventDefault()
           createCourseResult({
@@ -35,7 +36,7 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserMod
           setShowUserModal(false)
         }}
       >
-        <div className='add-result-form-inputs'>
+        <div className='add-result-form-inputs' data-test-id='add-result-form-inputs'>
           <Input
             label='Course Name'
             ref={nameRef}
@@ -47,6 +48,7 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserMod
         </div>
         <div className='add-result-form-controls'>
           <Button
+            dataTestId='add-result-form-back-button'
             onClick={() => {
               setShowUserModal(true)
               setShowAddCourseResultModal(false)
@@ -56,6 +58,7 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserMod
             Back
           </Button>
           <Button
+            dataTestId='add-result-form-submit-button'
             type='submit'
           >
             Create Course Result

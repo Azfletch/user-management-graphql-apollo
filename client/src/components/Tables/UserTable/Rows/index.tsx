@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
 
-import AddCourseResultModal from '../../../Modals/AddCourseResultModal';
+import AddCourseResultModal from '../../../Modals/AddCourseResult';
 import ResultModal from '../../../Modals/ResultModal';
 import UserModal from '../../../Modals/UserModal';
 import UserTableRow from '../Row';
 import { sortUsers } from '../../../../lib/sorting';
-import type { CourseResult, User } from '../../../../types/user'
+import type { CourseResult } from '../../../../types/courseResult'
+import type { User } from '../../../../types/user';
 
 const UserTableRows = ({ users, sortKey, isReverse }: Props) => {
   const [sortedUsers, setSortedUsers] = useState<User[]>(users);

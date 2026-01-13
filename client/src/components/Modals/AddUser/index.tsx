@@ -7,7 +7,7 @@ import './index.scss'
 
 const AddUserModal = ({setShowAddUserModal}: Props) => {
   return (
-    <div className='add-user-modal'>
+    <div className='add-user-modal' data-test-id='add-user-modal'>
       <button
         className='add-user-modal-overlay'
         onClick={() => setShowAddUserModal(false)}

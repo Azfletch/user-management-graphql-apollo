@@ -13,7 +13,7 @@ export const UserTable = ({ users }: Props) => {
   const [isReverse, setIsReverse] = useState<boolean>(true)
 
   return (
-    <div className='user-table'>
+    <div className='user-table' data-test-id='user-table'>
       <TableSorter
         isReverse={isReverse}
         setIsReverse={setIsReverse}

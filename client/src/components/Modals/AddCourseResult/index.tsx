@@ -8,7 +8,7 @@ import './index.scss'
 
 const AddCourseResultModal = ({ setShowAddCourseResultModal, setShowUserModal, user }: Props) => {
   return (
-    <div className='add-course-result-modal'>
+    <div className='add-course-result-modal' data-test-id='add-course-result-modal'>
       <button
         className='add-course-result-modal-overlay'
         onClick={() => setShowAddCourseResultModal(false)}

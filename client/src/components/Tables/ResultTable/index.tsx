@@ -3,7 +3,7 @@ import { useState, type Dispatch, type SetStateAction } from 'react';
 import ResultTableRows from './Rows';
 import TableSorter from '../Sorter';
 import { courseResultTableColumns } from '../../../lib/sorting';
-import type { CourseResult } from '../../../types/user';
+import type { CourseResult } from '../../../types/courseResult';
 
 import './index.scss';
 
@@ -13,7 +13,7 @@ const ResultTable = ({ results, setShowUserModal, setSelectedResult, setShowResu
   const [isReverse, setIsReverse] = useState<boolean>(true)
 
   return (
-    <div className='result-table'>
+    <div className='result-table' data-test-id='result-table'>
       <TableSorter
         isReverse={isReverse}
         setIsReverse={setIsReverse}

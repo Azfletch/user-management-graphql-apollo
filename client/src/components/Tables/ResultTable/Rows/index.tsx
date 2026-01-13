@@ -1,7 +1,8 @@
 import { useEffect, useState, type Dispatch, type SetStateAction } from 'react'
-import type { CourseResult } from '../../../../types/user'
-import { sortCourseResults } from '../../../../lib/sorting';
+
 import ResultTableRow from '../Row';
+import type { CourseResult } from '../../../../types/courseResult'
+import { sortCourseResults } from '../../../../lib/sorting';
 
 const ResultTableRows = ({ results, sortKey, isReverse, setShowUserModal, setSelectedResult, setShowResultModal }: Props) => {
   const [sortedResults, setSortedResults] = useState<CourseResult[]>(results);

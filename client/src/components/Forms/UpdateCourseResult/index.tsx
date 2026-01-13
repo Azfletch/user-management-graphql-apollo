@@ -5,7 +5,7 @@ import Button from '../../Button'
 import Input from '../../Input'
 import { GET_USERS } from '../../../queries/users'
 import { UPDATE_COURSE_RESULT } from '../../../queries/courseResults'
-import type { CourseResult } from '../../../types/user'
+import type { CourseResult } from '../../../types/courseResult'
 
 import './index.scss'
 
@@ -19,7 +19,8 @@ const UpdateCourseResultForm = ({ result, setShowUserModal, setShowResultModal, 
   return (
     <div>
       <form
-        className='update-result-form' 
+        className='update-result-form'
+        data-test-id='update-result-form' 
         onSubmit={e => {
           e.preventDefault()
           updateCourseResult({
@@ -36,7 +37,7 @@ const UpdateCourseResultForm = ({ result, setShowUserModal, setShowResultModal, 
           setShowUserModal(false)
         }}
       >
-        <div className='update-result-form-inputs'>
+        <div className='update-result-form-inputs' data-test-id='update-result-form-inputs'>
           <Input
             label='Course Name'
             ref={nameRef}
@@ -47,10 +48,17 @@ const UpdateCourseResultForm = ({ result, setShowUserModal, setShowResultModal, 
           />
         </div>
         <div className='update-result-form-controls'>
-          <Button isSecondary onClick={() => setIsInUpdateResultMode(false)}>
+          <Button
+            dataTestId='update-result-form-back-button'
+            isSecondary
+            onClick={() => setIsInUpdateResultMode(false)}
+          >
             Back
           </Button>
-          <Button type='submit'>
+          <Button
+            dataTestId='update-result-form-submit-button'
+            type='submit'
+          >
             Update Course Result
           </Button>
         </div>

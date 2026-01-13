@@ -1,5 +1,6 @@
 import type { TableColumns } from '../../types/tables'
-import type { CourseResult, User } from '../../types/user'
+import type { CourseResult } from '../../types/courseResult'
+import type { User } from '../../types/user'
 
 export const courseResultTableColumns: TableColumns = [
   {

@@ -18,7 +18,8 @@ const AddUserForm = ({ setShowAddUserModal }: Props) => {
   return (
     <div>
       <form
-        className='add-user-form' 
+        className='add-user-form'
+        data-test-id='add-user-form'
         onSubmit={e => {
           e.preventDefault()
           createUser({
@@ -34,13 +35,13 @@ const AddUserForm = ({ setShowAddUserModal }: Props) => {
           setShowAddUserModal(false)
         }}
       >
-        <div className='add-user-form-inputs'>
+        <div className='add-user-form-inputs' data-test-id='add-user-form-inputs'>
           <Input
             label='First Name'
             ref={firstNameRef}
           />
           <Input
-            label='First Name'
+            label='Last Name'
             ref={lastNameRef}
           />
           <Input
@@ -50,7 +51,7 @@ const AddUserForm = ({ setShowAddUserModal }: Props) => {
           />
         </div>
         <div className='add-user-form-controls'>
-          <Button type='submit'>Create User</Button>
+          <Button dataTestId='add-user-form-submit-button' type='submit'>Create User</Button>
         </div>
       </form>
     </div>

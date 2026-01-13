@@ -1,4 +1,5 @@
 import { render, fireEvent, waitFor } from '@testing-library/react';
+
 import Header from './';
 
 describe('<Header />', () => {

@@ -12,13 +12,23 @@ const UserTableRow = ({ user, setShowUserModal, setSelectedUser }: Props) => {
   }
 
   return (
-    <div className='user-table-row' onClick={handleRowClick} >
+    <div
+      className='user-table-row'
+      data-test-id='user-table-row'
+      onClick={handleRowClick}
+    >
       {userTableColumns.map((column, index) => {
         const value = user[column.sortKey as keyof User]
 
         if (typeof value === 'string') {
           return (
-            <div className='user-table-row-cell' key={index}>{value}</div>
+            <div
+              className='user-table-row-cell'
+              data-test-id='user-table-row-cell'
+              key={index}
+            >
+              {value}
+            </div>
           )
         } else {
           return (

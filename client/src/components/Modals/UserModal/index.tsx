@@ -1,14 +1,15 @@
 import { useState, type Dispatch, type SetStateAction } from 'react'
 import { useMutation } from '@apollo/client'
 
+import Button from '../../Button'
 import Close from '../../Icons/Close'
 import UpdateUserForm from '../../Forms/UpdateUser'
 import ResultTable from '../../Tables/ResultTable'
 import { DELETE_USER, GET_USERS } from '../../../queries/users'
-import type { CourseResult, User } from '../../../types/user'
+import type { CourseResult } from '../../../types/courseResult'
+import type { User } from '../../../types/user'
 
 import './index.scss'
-import Button from '../../Button'
 
 const UserModal = ({ user, setShowUserModal, setShowAddCourseResultModal, setSelectedResult, setShowResultModal }: Props) => {
   const { firstName, lastName, courseResults } = user
@@ -28,7 +29,7 @@ const UserModal = ({ user, setShowUserModal, setShowAddCourseResultModal, setSel
   }
 
   return (
-    <div className='user-modal'>
+    <div className='user-modal' data-test-id='user-modal'>
       <button
         className='user-modal-overlay'
         onClick={() => setShowUserModal(false)}
@@ -55,7 +56,7 @@ const UserModal = ({ user, setShowUserModal, setShowAddCourseResultModal, setSel
                   setSelectedResult={setSelectedResult}
                   setShowResultModal={setShowResultModal}
                 /> :
-                <div className='user-modal-content-course-results-text'>
+                <div className='user-modal-content-course-results-text' data-test-id='user-modal-content-course-results-text'>
                   No Course Results Recorded!
                 </div>
               }
@@ -64,7 +65,8 @@ const UserModal = ({ user, setShowUserModal, setShowAddCourseResultModal, setSel
             <div className='user-modal-content-controls'>
               <div>
                 <Button
-                  className='user-modal-content-controls-edit'
+                  dataTestId='user-modal-update-button'
+                  className='user-modal-content-controls-update'
                   isSecondary
                   onClick={() => setIsInUpdateUserMode(true)}
                 >
@@ -72,6 +74,7 @@ const UserModal = ({ user, setShowUserModal, setShowAddCourseResultModal, setSel
                 </Button>
                   
                 <Button
+                  dataTestId='user-modal-delete-button'
                   isDanger
                   onClick={handleDelete}
                 >

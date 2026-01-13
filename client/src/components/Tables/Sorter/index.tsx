@@ -9,7 +9,7 @@ import './index.scss'
 
 const TableSorter = ({sortKey, isReverse, setIsReverse, setSortKey, tableColumns}: Props) => {
   return (
-    <div className='table-sorter'>
+    <div className='table-sorter' data-test-id='table-sorter'>
       {tableColumns.map((column, index) => {
         const isCurrentColumn = column.sortKey === sortKey;
 
@@ -21,6 +21,7 @@ const TableSorter = ({sortKey, isReverse, setIsReverse, setSortKey, tableColumns
         return (
           <div
             className={sortTextClasses}
+            data-test-id='table-sorter-cell'
             key={index}
             onClick={() => {
               if (isCurrentColumn) {
