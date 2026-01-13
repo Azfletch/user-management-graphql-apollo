@@ -30,8 +30,6 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserMod
               score: Number(scoreRef.current?.value),
             }
           })
-          if (nameRef.current) nameRef.current.value = ''
-          if (scoreRef.current) scoreRef.current.value = ''
           setShowAddCourseResultModal(false)
           setShowUserModal(false)
         }}
@@ -40,10 +38,12 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserMod
           <Input
             label='Course Name'
             ref={nameRef}
+            required
           />
           <Input
             label='Course Score'
             ref={scoreRef}
+            required
           />
         </div>
         <div className='add-result-form-controls'>
@@ -57,12 +57,9 @@ const AddCourseResultForm = ({ user, setShowAddCourseResultModal, setShowUserMod
           >
             Back
           </Button>
-          <Button
-            dataTestId='add-result-form-submit-button'
+          <input
             type='submit'
-          >
-            Create Course Result
-          </Button>
+          />
         </div>
       </form>
     </div>

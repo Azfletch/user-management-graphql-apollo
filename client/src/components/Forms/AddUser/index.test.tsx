@@ -20,6 +20,5 @@ describe('<AddUserForm />', () => {
     expect(getAllByTestId('input-label')[0]).toHaveTextContent('First Name')
     expect(getAllByTestId('input-label')[1]).toHaveTextContent('Last Name')
     expect(getAllByTestId('input-label')[2]).toHaveTextContent('Email')
-    expect(getByTestId('add-user-form-submit-button')).toBeInTheDocument()
   });
 });

@@ -2,7 +2,7 @@ import type { Ref } from 'react'
 
 import './index.scss'
 
-const Input = ({ label, ref, type }: Props) => (
+const Input = ({ label, ref, type, required = false }: Props) => (
   <div className='input' data-test-id='input'>
     {label &&
       <div className='input-label' data-test-id='input-label'>
@@ -15,6 +15,7 @@ const Input = ({ label, ref, type }: Props) => (
       data-test-id='input-field'
       ref={ref}
       type={type}
+      required={required}
     />
   </div>
 )
@@ -24,6 +25,7 @@ type Props = {
   label?: string
   ref: Ref<HTMLInputElement> | undefined
   type?: string
+  required?: boolean
 }
 
 export default Input

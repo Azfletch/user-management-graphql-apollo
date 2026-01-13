@@ -31,6 +31,5 @@ describe('<AddCourseResultForm />', () => {
     expect(getAllByTestId('input-label')[0]).toHaveTextContent('Course Name')
     expect(getAllByTestId('input-label')[1]).toHaveTextContent('Course Score')
     expect(getByTestId('add-result-form-back-button')).toBeInTheDocument()
-    expect(getByTestId('add-result-form-submit-button')).toBeInTheDocument()
   });
 });

@@ -31,9 +31,6 @@ const UpdateUserForm = ({ user, setShowUserModal, setIsInUpdateUserMode }: Props
               email: emailRef.current?.value || user.email
             }
           })
-          if (firstNameRef.current) firstNameRef.current.value = ''
-          if (lastNameRef.current) lastNameRef.current.value = ''
-          if (emailRef.current) emailRef.current.value = ''
           setShowUserModal(false)
         }}
       >

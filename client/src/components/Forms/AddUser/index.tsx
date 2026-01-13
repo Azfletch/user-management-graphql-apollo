@@ -1,7 +1,6 @@
 import { useMutation } from '@apollo/client'
 import { useRef, type Dispatch, type SetStateAction } from 'react'
 
-import Button from '../../Button'
 import Input from '../../Input'
 import { CREATE_USER, GET_USERS } from '../../../queries/users'
 
@@ -24,34 +23,38 @@ const AddUserForm = ({ setShowAddUserModal }: Props) => {
           e.preventDefault()
           createUser({
             variables: {
-              firstName: firstNameRef.current?.value || '',
-              lastName: lastNameRef.current?.value || '',
-              email: emailRef.current?.value || ''
+              firstName: firstNameRef.current?.value,
+              lastName: lastNameRef.current?.value,
+              email: emailRef.current?.value
             }
           })
-          if (firstNameRef.current) firstNameRef.current.value = ''
-          if (lastNameRef.current) lastNameRef.current.value = ''
-          if (emailRef.current) emailRef.current.value = ''
           setShowAddUserModal(false)
         }}
       >
         <div className='add-user-form-inputs' data-test-id='add-user-form-inputs'>
           <Input
             label='First Name'
+            type='text'
             ref={firstNameRef}
+            required
           />
           <Input
             label='Last Name'
+            type='text'
             ref={lastNameRef}
+            required
           />
           <Input
             label='Email'
             ref={emailRef}
             type='email'
+            required
           />
         </div>
         <div className='add-user-form-controls'>
-          <Button dataTestId='add-user-form-submit-button' type='submit'>Create User</Button>
+          <input
+            type='submit'
+          />
         </div>
       </form>
     </div>

@@ -31,8 +31,6 @@ const UpdateCourseResultForm = ({ result, setShowUserModal, setShowResultModal, 
               learnerId: result.learnerId
             }
           })
-          if (nameRef.current) nameRef.current.value = ''
-          if (scoreRef.current) scoreRef.current.value = ''
           setShowResultModal(false)
           setShowUserModal(false)
         }}
