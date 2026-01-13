@@ -23,3 +23,10 @@ server:
 cd server && pnpm run start
 ```
 
+Tests are written using vitest and can be run with the following command:
+
+server:
+```bash
+cd client && pnpm test
+```
+
