@@ -15,18 +15,22 @@ To run the app locally:
 
 client:
 ```bash
-cd client && pnpm run dev
+cd client && pnpm dev
 ```
 
 server:
 ```bash
-cd server && pnpm run start
+cd server && pnpm start
 ```
 
-Tests are written using vitest and can be run with the following command:
+Client unit tests are written using vitest and can be run with the following command:
 
-server:
 ```bash
 cd client && pnpm test
 ```
 
+GraphQL resolvers unit tests are written using jest and can be run with the following command:
+
+```bash
+cd derver && pnpm test
+```
