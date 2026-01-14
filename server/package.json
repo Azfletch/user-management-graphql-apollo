@@ -6,9 +6,9 @@
   "main": "index.js",
   "dependencies": {
     "@apollo/server": "^4.12.2",
-		"graphql": "^16.11.0",
-    "graphql-tag": "^2.12.6",
+    "graphql": "^16.11.0",
     "graphql-iso-date": "^3.6.1",
+    "graphql-tag": "^2.12.6",
     "graphql-type-json": "^0.3.2",
     "lodash": "^4.17.21",
     "lowdb": "^7.0.1"
@@ -18,9 +18,11 @@
     "@babel/core": "^7.28.0",
     "@babel/node": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.10"
   },
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js"
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "jest"
   }
 }

@@ -163,6 +163,12 @@
       "learnerId": "656a186c-e61b-4ff9-8169-22063e593699",
       "name": "Chemistry Course",
       "score": 95
+    },
+    {
+      "id": "d9e5cf3b-7a4c-4e3c-9fa0-e6c042244a6e",
+      "learnerId": "dbb600b7-24ab-43bf-ba4e-d851e50614d8",
+      "name": "Another Course",
+      "score": 50
     }
   ]
 }
