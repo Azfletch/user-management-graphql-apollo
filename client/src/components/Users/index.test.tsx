@@ -54,7 +54,7 @@ const errorMock = [
       query: GET_USERS,
     },
     result: {
-      errors: [new GraphQLError("Error!")],
+      errors: [new GraphQLError('Error!')],
     },
   },
 ];

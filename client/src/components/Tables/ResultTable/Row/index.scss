@@ -1,13 +1,13 @@
 .result-table-row {
   display: flex;
-  cursor: pointer;
   border-radius: 8px;
+  cursor: pointer;
 
   &-cell {
-    width: 205px;
-    padding: 12px 24px;
     font-family: 'Roboto';
+    padding: 12px 24px;
     text-align: left;
+    width: 205px;
   }
 
   &:hover {

@@ -1,12 +1,12 @@
 .user-table-row {
+  border-radius: 8px;
   display: flex;
   cursor: pointer;
-  border-radius: 8px;
-
+  
   &-cell {
-    width: 205px;
-    padding: 12px 24px;
     font-family: 'Roboto';
+    padding: 12px 24px;
+    width: 205px;
   }
 
   &:hover {

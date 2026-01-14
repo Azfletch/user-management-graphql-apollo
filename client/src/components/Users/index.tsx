@@ -1,13 +1,13 @@
 import { useQuery } from '@apollo/client';
 import { type Dispatch, type SetStateAction } from 'react'
 
+import Alert from '../Icons/Alert';
+import Loading from '../Icons/Loading';
 import AddUserModal from '../Modals/AddUser'
 import { UserTable } from '../Tables/UserTable'
 import { GET_USERS } from '../../queries/users';
 
 import './index.scss'
-import Loading from '../Icons/Loading';
-import Alert from '../Icons/Alert';
 
 const Users = ({ showAddUserModal, setShowAddUserModal }: Props) => {
   const { loading, error, data } = useQuery(GET_USERS)
