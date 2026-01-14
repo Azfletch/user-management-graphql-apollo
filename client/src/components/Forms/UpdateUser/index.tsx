@@ -38,15 +38,18 @@ const UpdateUserForm = ({ user, setShowUserModal, setIsInUpdateUserMode }: Props
           <Input
             label='First Name'
             ref={firstNameRef}
+            placeholder={user.firstName}
           />
           <Input
             label='Last Name'
             ref={lastNameRef}
+            placeholder={user.lastName}
           />
           <Input
             label='Email'
             ref={emailRef}
             type='email'
+            placeholder={user.email}
           />
         </div>
         <div className='update-user-form-controls'>

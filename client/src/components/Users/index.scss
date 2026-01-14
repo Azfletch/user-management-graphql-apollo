@@ -2,4 +2,16 @@
   display: flex;
   padding: 36px 20px 0px;
   justify-content: center;
+
+  &-loading, &-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 36px 20px 0px;
+
+    &-text {
+      font-family: 'Roboto';
+      font-size: 18px;
+    }
+  }
 }

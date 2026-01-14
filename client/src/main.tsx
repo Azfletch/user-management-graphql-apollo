@@ -4,7 +4,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
 import App from './components/App'
 
-import './index.scss'
+import './styles/index.scss'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/graphql';
 

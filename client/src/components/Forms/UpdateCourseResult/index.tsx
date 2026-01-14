@@ -39,10 +39,12 @@ const UpdateCourseResultForm = ({ result, setShowUserModal, setShowResultModal, 
           <Input
             label='Course Name'
             ref={nameRef}
+            placeholder={result.name}
           />
           <Input
             label='Course Score'
             ref={scoreRef}
+            placeholder={String(result.score)}
           />
         </div>
         <div className='update-result-form-controls'>

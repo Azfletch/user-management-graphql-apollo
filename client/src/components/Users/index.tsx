@@ -6,12 +6,29 @@ import { UserTable } from '../Tables/UserTable'
 import { GET_USERS } from '../../queries/users';
 
 import './index.scss'
+import Loading from '../Icons/Loading';
+import Alert from '../Icons/Alert';
 
 const Users = ({ showAddUserModal, setShowAddUserModal }: Props) => {
   const { loading, error, data } = useQuery(GET_USERS)
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error!</p>
+  if (loading) return (
+    <div className='users-loading' data-test-id='users-loading'>
+      <Loading />
+      <div className='users-loading-text'>
+        Loading Users
+      </div>
+    </div>
+  )
+
+  if (error) return (
+    <div className='users-error' data-test-id='users-error'>
+      <Alert /> 
+      <div className='users-error-text'>
+        Error Fetching Users
+      </div>
+    </div>
+  )
 
   return (
     <div className='users' data-test-id='users'>

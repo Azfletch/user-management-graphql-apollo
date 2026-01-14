@@ -47,6 +47,12 @@
       "firstName": "Steph",
       "lastName": "Curry",
       "email": "steph@test.com"
+    },
+    {
+      "id": "656a186c-e61b-4ff9-8169-22063e593699",
+      "firstName": "Walter",
+      "lastName": "White",
+      "email": "walter@example.com"
     }
   ],
   "courseResults": [
@@ -150,6 +156,12 @@
       "id": "751224c3-1716-486d-bf95-a6e00c06b18b",
       "learnerId": "30fdce2e-1fc1-480a-b770-a3a4ca25c368",
       "name": "Nba Course",
+      "score": 95
+    },
+    {
+      "id": "8998be76-5c7e-4cec-a117-9e2959771615",
+      "learnerId": "656a186c-e61b-4ff9-8169-22063e593699",
+      "name": "Chemistry Course",
       "score": 95
     }
   ]

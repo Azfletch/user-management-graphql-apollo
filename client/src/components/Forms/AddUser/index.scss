@@ -17,13 +17,10 @@
       cursor: pointer;
       font-family: 'Roboto';
       font-size: 18px;
+      min-width: 100px;
       outline: 0;
       padding: 8px 12px;
       text-align: center;
-
-      &:disabled {
-        background-color: #a0b4f4;
-      }
     }
   }
 
