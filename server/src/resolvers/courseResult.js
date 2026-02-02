@@ -10,8 +10,8 @@ export default {
     courseResults: async (parent, args, { db }, info) => {
       return db.get('courseResults').value()
     },
-    courseResult: async (parent, { id }, { db }, info) => {
-      return db.chain.get('courseResults').getById(id).value()
+    courseResult: async (parent, args, { db }, info) => {
+      return db.chain.get('courseResults').find({ id: args.id }).value()
     }
   },
   Mutation: {

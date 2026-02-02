@@ -17,8 +17,8 @@ describe('Query.user resolver', () => {
     };
 
     const valueMock = jest.fn().mockReturnValue(mockUser);
-    const getByIdMock = jest.fn().mockReturnValue({ value: valueMock });
-    const getMock = jest.fn().mockReturnValue({ getById: getByIdMock });
+    const findMock = jest.fn().mockReturnValue({ value: valueMock });
+    const getMock = jest.fn().mockReturnValue({ find: findMock });
 
     const context = {
       db: {
@@ -38,7 +38,7 @@ describe('Query.user resolver', () => {
     expect(result).toEqual(mockUser);
 
     expect(getMock).toHaveBeenCalledWith('users');
-    expect(getByIdMock).toHaveBeenCalledWith('123');
+    expect(findMock).toHaveBeenCalledWith({id: '123'});
     expect(valueMock).toHaveBeenCalled();
   });
 });
